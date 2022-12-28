@@ -15,8 +15,6 @@ public class StudentController {
     @Autowired //Automatically takes care of the StudentService Object Creation
     StudentService studentService; //Object has been created --> so that it can call the functions
 
-    //Database
-
 
     //Add a Student
     @PostMapping("/add_student")
@@ -88,12 +86,12 @@ public class StudentController {
 
 
     //Delete a student ----> H.W
-    @DeleteMapping("/delete_student")
-    public ResponseEntity<String> deleteStudent(@RequestParam("id")Integer id){
-
-        studentDb.remove(id);
-
-        return new ResponseEntity<>("The student has been deleted", HttpStatus.OK);
-    }
+//    @DeleteMapping("/delete_student")
+//    public ResponseEntity<String> deleteStudent(@RequestParam("id")Integer id){
+//
+//        studentDb.remove(id);
+//
+//        return new ResponseEntity<>("The student has been deleted", HttpStatus.OK);
+//    }
 
 }
